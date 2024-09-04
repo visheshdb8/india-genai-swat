@@ -1,7 +1,7 @@
 # Databricks notebook source
 # DBTITLE 1,Install required libraries
 # MAGIC
-# MAGIC %pip install -U --quiet databricks-sdk langchain-core langchain-community==0.2.6 gradio pymupdf 
+# MAGIC %pip install -U --quiet databricks-sdk==0.31.1 langchain-core==0.2.38 langchain-community==0.2.6 gradio==4.42.0 pymupdf==1.24.10 
 # MAGIC dbutils.library.restartPython()
 
 # COMMAND ----------
@@ -132,10 +132,8 @@ with gr.Blocks() as demo:
       outputs=[pass_fail, keywords, reasoning]
     )
     
-
-demo.launch(share=True, debug=True)
-
-
+# change debug to True to run the application in debug mode
+demo.launch(share=True, debug=False)
 
 # COMMAND ----------
 
