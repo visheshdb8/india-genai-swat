@@ -3,10 +3,10 @@
 # MAGIC ####Install Libraries
 # MAGIC
 # MAGIC for GPU clusters (tested on 14.3 LTS ML GPU with single node g5.2xlarge), use:
-# MAGIC ```%pip install -U gradio==4.31.4 boto3==1.34.108 langchain==0.2.0 langchain-community==0.2.0 pypdf==4.2.0 sentence-transformers==2.7.0 faiss-gpu==1.7.2 mlflow==2.11.0 -q```
+# MAGIC ```%pip install -U gradio==4.31.4 boto3==1.34.108 langchain==0.2.0 langchain-community==0.2.0 pypdf==4.2.0 sentence-transformers==2.7.0 faiss-gpu-cu11==1.8.0.2 mlflow==2.11.0 -q```
 # MAGIC
 # MAGIC for CPU clusters (tested on 14.3 LTS DBR Non-ML with single node r5.xlarge), use:
-# MAGIC ```%pip install -U gradio==4.31.4 boto3==1.34.108 langchain==0.2.0 langchain-community==0.2.0 pypdf==4.2.0 sentence-transformers==2.7.0 faiss-cpu==1.8.0 mlflow==2.11.0 -q```
+# MAGIC ```%pip install -U gradio==4.44.0 boto3==1.35.26 langchain==0.3.0 langchain-community==0.3.0 pypdf==5.0.0 sentence-transformers==3.1.1 langchain-huggingface==0.1.0 faiss-cpu==1.8.0.post1 mlflow==2.16.2 -q```
 # MAGIC
 # MAGIC ####Credentials
 # MAGIC
@@ -20,9 +20,10 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install -U gradio==4.31.4 boto3==1.34.108 langchain==0.2.0 langchain-community==0.2.0 pypdf==4.2.0 sentence-transformers==2.7.0 faiss-gpu==1.7.2 mlflow==2.11.0 -q
-# MAGIC
-# MAGIC dbutils.library.restartPython()
+# %pip install -U gradio==4.31.4 boto3==1.34.108 langchain==0.2.0 langchain-community==0.2.0 pypdf==4.2.0 sentence-transformers==2.7.0 faiss-gpu-cu11==1.8.0.2 mlflow==2.11.0 -q
+
+%pip install -U gradio==4.44.0 boto3==1.35.26 langchain==0.3.0 langchain-community==0.3.0 pypdf==5.0.0 sentence-transformers==3.1.1 langchain-huggingface==0.1.0 faiss-cpu==1.8.0.post1 mlflow==2.16.2 -q
+dbutils.library.restartPython()
 
 # COMMAND ----------
 
